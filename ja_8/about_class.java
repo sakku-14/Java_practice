@@ -2,6 +2,9 @@ public class about_class {
 	public static void main(String args[]){
 		Human man = new Human("Yuki", 29);
 		man.introduce();
+		man.setAge(6);
+		System.out.println(man.getAge());
+		man.introduce();
 	}
 }
 
@@ -16,5 +19,18 @@ class Human {
 
 	public void introduce() {
 		System.out.println("My name is " + name + " and age is " + age + ".");
+	}
+
+	public void setAge(int a) {
+		if (a < 0) {
+			age = 0;
+		}
+		else {
+			age = a;
+		}
+	}
+
+	public int getAge() {
+		return (age);
 	}
 }
