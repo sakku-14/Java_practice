@@ -1,4 +1,7 @@
 public class about_static {
+	public static void func() {
+		System.out.println("C-lang style func");
+	}
 	public static void main(String args[]) {
 		NoStaticClass nsc = new NoStaticClass();
 		nsc.a = 10;
@@ -6,6 +9,7 @@ public class about_static {
 		
 		StaticClass.a = 20;
 		StaticClass.print();
+		func();
 	}
 }
 
