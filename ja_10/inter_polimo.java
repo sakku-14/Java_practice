@@ -7,6 +7,9 @@ public class inter_polimo {
 		for (int i = 0; i < police.length; i++){
 			police[i].investigate();
 		}
+		Police p;
+		p = new Policeman();
+		p.investigate();
 	}
 }
 
