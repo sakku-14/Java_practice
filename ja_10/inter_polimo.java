@@ -7,9 +7,12 @@ public class inter_polimo {
 		for (int i = 0; i < police.length; i++){
 			police[i].investigate();
 		}
-		Police p;
-		p = new Policeman();
-		p.investigate();
+		for (int i = 0; i < police.length; i++){
+			if (police[i] instanceof Policeman)
+				System.out.println("警察官です");
+			else
+				System.out.println("警察官ではありません");
+		}
 	}
 }
 
