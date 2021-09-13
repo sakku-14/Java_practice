@@ -1,9 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "ja_14/thread",
-        "ja_14/ex2",
-        "ja_12/ex12_1",
-        "ja13/multi_thread",
-        "ja_16/console"
+        "ja_18/ex1"
     ]
 }

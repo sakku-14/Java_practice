@@ -1,0 +1,3 @@
+saku,japan,10
+yuki,usa,16
+keiko,jamaica,18

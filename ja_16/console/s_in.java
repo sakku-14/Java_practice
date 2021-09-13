@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class in {
+public class s_in {
     public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
