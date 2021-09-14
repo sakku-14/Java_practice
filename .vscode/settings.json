@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "ja_18/ex"
+        "ja_18/ex",
+        "ja_18/ex2"
     ]
 }
