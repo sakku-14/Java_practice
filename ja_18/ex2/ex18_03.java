@@ -32,6 +32,7 @@ public class ex18_03 {
 }
 
 class FileInOut extends Thread {
+    private static Object obj = new Object();
     private BufferedReader br;
     private BufferedWriter bw;
     
@@ -40,17 +41,43 @@ class FileInOut extends Thread {
         this.bw = bw;
     }
 
-    public synchronized void run() {
+    public void run() {
         try {
             String str;
         
             while (true) {
-                str = br.readLine();
-                if (str == null) break;
-                bw.write(str);
+                synchronized(obj) {
+                    str = br.readLine();
+                    if (str == null) break;
+                    bw.write(str);
+                }
             }
         } catch (Exception e) {
             System.err.println(e);;
         }
     }
 }
+
+// class FileInOut extends Thread {
+//     private BufferedReader br;
+//     private BufferedWriter bw;
+    
+//     public FileInOut (BufferedReader br, BufferedWriter bw) {
+//         this.br = br;
+//         this.bw = bw;
+//     }
+
+//     public synchronized void run() {
+//         try {
+//             String str;
+        
+//             while (true) {
+//                 str = br.readLine();
+//                 if (str == null) break;
+//                 bw.write(str);
+//             }
+//         } catch (Exception e) {
+//             System.err.println(e);;
+//         }
+//     }
+// }
